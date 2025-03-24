@@ -10,7 +10,7 @@ export function HeroSection() {
           <div className="animate-fade-in-up">
             <p className="subtitle">Web Developer | ML Enthusiast | Blockchain Explorer</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-              Hi, I'm <span className="text-primary">Your Name</span>
+              Hi, I'm <span className="text-primary">Pratham Jaiswal</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               A third-year engineering student passionate about creating innovative solutions

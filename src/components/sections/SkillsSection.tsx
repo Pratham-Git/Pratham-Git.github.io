@@ -8,48 +8,47 @@ const skillCategories = [
     name: "Programming Languages",
     skills: [
       { name: "Java", level: 90 },
-      { name: "JavaScript", level: 85 },
-      { name: "Python", level: 80 },
-      { name: "C++", level: 75 },
-      { name: "TypeScript", level: 70 },
+      { name: "Python", level: 85 },
+      { name: "SQL", level: 80 },
+      { name: "JavaScript", level: 75 },
+      { name: "HTML/CSS", level: 85 },
     ],
   },
   {
-    name: "Web Development",
+    name: "Web & App Development",
     skills: [
-      { name: "HTML/CSS", level: 90 },
-      { name: "React", level: 85 },
-      { name: "Node.js", level: 80 },
-      { name: "React Native", level: 75 },
-      { name: "Angular", level: 65 },
+      { name: "JSP", level: 85 },
+      { name: "React Native", level: 80 },
+      { name: "Android Studio", level: 75 },
+      { name: "Bootstrap", level: 90 },
     ],
   },
   {
-    name: "Databases & Tools",
+    name: "Technologies & Tools",
     skills: [
       { name: "MySQL", level: 90 },
-      { name: "MongoDB", level: 85 },
-      { name: "Git", level: 90 },
+      { name: "Git", level: 85 },
       { name: "Docker", level: 70 },
-      { name: "AWS", level: 65 },
+      { name: "TensorFlow/Keras", level: 75 },
+      { name: "Solidity", level: 65 },
     ],
   },
 ];
 
 // Additional specialized skills
 const specializedSkills = [
+  "MobileNet Architecture",
+  "Web3.js",
   "Blockchain Development",
   "Machine Learning",
-  "Data Mining",
-  "UI/UX Design",
   "RESTful APIs",
-  "GraphQL",
-  "Agile Methodology",
-  "DevOps",
-  "System Architecture",
+  "Database Design",
+  "UI/UX Design",
   "Mobile Development",
-  "Test-Driven Development",
-  "CI/CD",
+  "Servlets",
+  "System Architecture",
+  "Testing & Debugging",
+  "Version Control",
 ];
 
 export function SkillsSection() {
@@ -76,7 +75,6 @@ export function SkillsSection() {
                       <Progress
                         value={skill.level}
                         className="h-2"
-                        indicatorClassName="bg-primary transition-all duration-1000 ease-in-out"
                       />
                     </div>
                   ))}
@@ -105,10 +103,10 @@ export function SkillsSection() {
                 I am currently expanding my expertise in the following areas:
               </p>
               <ul className="space-y-2 list-disc list-inside text-muted-foreground">
-                <li>Advanced React patterns and performance optimization</li>
+                <li>Advanced AI & ML applications with TensorFlow and Keras</li>
                 <li>Blockchain development with Ethereum and Solidity</li>
-                <li>Deep learning with TensorFlow and PyTorch</li>
-                <li>Cloud architecture and serverless computing</li>
+                <li>Mobile app development with React Native</li>
+                <li>Full-stack web development with Java and modern frameworks</li>
               </ul>
             </div>
           </div>

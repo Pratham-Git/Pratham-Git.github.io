@@ -4,40 +4,50 @@ import { Badge } from "@/components/ui/badge";
 
 const experiences = [
   {
-    title: "Software Development Intern",
-    company: "TechCorp Solutions",
-    period: "May 2023 - Aug 2023",
-    description: "Developed and maintained web applications using React.js and Node.js. Collaborated with cross-functional teams to implement new features and fix bugs.",
-    skills: ["React.js", "Node.js", "MongoDB", "Agile"],
+    title: "Intern / Software Developer",
+    company: "Centre for Railway Information Systems (CRIS), New Delhi — CEP Group",
+    period: "June 2024 - August 2024",
+    description: "Worked under the guidance of the Principal Project Engineer in the CEP group on the Indian Railway Works Contract Management System (IRWCMS) Web Application.",
+    skills: ["Java", "JSP", "Servlets", "Bootstrap", "MySQL"],
     achievements: [
-      "Reduced page load time by 40% through code optimization",
-      "Implemented a new dashboard feature that increased user engagement by 25%",
-      "Contributed to the company's open-source projects"
+      "Solely developed a module for handling quotations and manual tenders using Java Servlets, JSP, and Bootstrap",
+      "Improved the efficiency of tender management through streamlined processes",
+      "Ensured robust functionality through comprehensive testing and validation",
+      "Met project deadlines independently"
     ]
   },
   {
-    title: "Research Assistant",
-    company: "University Research Lab",
-    period: "Jan 2023 - Present",
-    description: "Assisting in research on machine learning applications in healthcare. Developing models for medical image analysis and prediction of patient outcomes.",
-    skills: ["Python", "TensorFlow", "Data Analysis", "Research Methodology"],
+    title: "Intern / Software Developer",
+    company: "BloomExim Pvt. Ltd. | JohnPride, New Delhi",
+    period: "June 2023 - August 2023",
+    description: "Participated in a software development internship focusing on website quality assurance and maintenance.",
+    skills: ["Quality Assurance", "Bug Tracking", "File Management", "Web Development"],
     achievements: [
-      "Co-authored a research paper published in a peer-reviewed journal",
-      "Developed a machine learning model with 92% accuracy for disease prediction",
-      "Presented research findings at two university symposiums"
+      "Identified and reported bugs in the company website, improving user experience and overall functionality",
+      "Regularly communicated with the development team to track bug fixes and ensure timely updates",
+      "Managed file transfers and website updates using tools such as FileZilla, contributing to efficient project workflows"
     ]
+  }
+];
+
+const education = [
+  {
+    degree: "B.Tech in Computer Science with Specialization in AI and ML",
+    institution: "SRM Institute of Science and Technology, Delhi NCR",
+    period: "2022 - 2026 (Expected)",
+    description: "Pursuing a specialized degree in Computer Science with a focus on Artificial Intelligence and Machine Learning technologies."
   },
   {
-    title: "Frontend Developer",
-    company: "Student Innovation Hub",
-    period: "Sep 2022 - Dec 2022",
-    description: "Led the frontend development for a student-run startup creating educational technology solutions. Designed and implemented responsive user interfaces.",
-    skills: ["HTML/CSS", "JavaScript", "UI/UX Design", "Figma"],
-    achievements: [
-      "Designed and implemented the UI for a learning management system used by 500+ students",
-      "Improved website accessibility to WCAG 2.1 AA standards",
-      "Mentored junior team members in frontend development"
-    ]
+    degree: "Higher Secondary Education",
+    institution: "K.R. Mangalam World School, GK-II",
+    period: "2022",
+    description: "Completed higher secondary education with a focus on Science and Mathematics, laying the foundation for engineering studies."
+  },
+  {
+    degree: "Secondary Education",
+    institution: "K.R. Mangalam World School, GK-II",
+    period: "",
+    description: "Completed secondary education with strong academic performance."
   }
 ];
 
@@ -77,6 +87,30 @@ export function ExperienceSection() {
                     <li key={i}>{achievement}</li>
                   ))}
                 </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <h2 className="section-heading mt-16">Education</h2>
+        <div className="space-y-6">
+          {education.map((edu, index) => (
+            <Card key={index} className="glass-card overflow-hidden animate-fade-in-up" style={{animationDelay: `${index * 150}ms`}}>
+              <CardHeader className="pb-2">
+                <div className="flex justify-between items-start flex-wrap gap-2">
+                  <div>
+                    <CardTitle className="text-xl">{edu.degree}</CardTitle>
+                    <CardDescription className="text-lg font-medium">{edu.institution}</CardDescription>
+                  </div>
+                  {edu.period && (
+                    <Badge variant="outline" className="text-sm font-normal">
+                      {edu.period}
+                    </Badge>
+                  )}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p>{edu.description}</p>
               </CardContent>
             </Card>
           ))}

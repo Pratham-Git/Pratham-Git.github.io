@@ -12,21 +12,19 @@ export function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in-right">
             <p className="text-lg">
-              I am a third-year engineering student with a passion for 
-              web development, data mining, and machine learning. Currently 
-              focusing on expanding my knowledge in these areas, I am 
-              constantly seeking new challenges and opportunities to grow.
+              I am a third-year Computer Science student at SRM Institute of Science and Technology,
+              specializing in AI and Machine Learning. My academic journey is complemented by practical
+              experience in web development, database management, and blockchain technologies.
             </p>
             <p className="text-lg">
-              My journey in engineering has led me to explore various 
-              technologies, from front-end frameworks to blockchain concepts. 
-              I believe in creating solutions that are not only technically 
-              sound but also user-friendly and accessible.
+              With a foundation in Java, Python, and SQL, I've developed applications ranging from
+              web-based management systems to mobile apps and ML models. My experience at CRIS and
+              BloomExim has equipped me with real-world software development skills.
             </p>
             <p className="text-lg">
-              My goal is to leverage my technical skills and knowledge to 
-              contribute to innovative projects that make a real impact in 
-              the world of technology.
+              My goal is to leverage my technical expertise to create innovative solutions that
+              bridge the gap between emerging technologies and practical applications, particularly
+              in the fields of blockchain and artificial intelligence.
             </p>
           </div>
           
@@ -38,7 +36,7 @@ export function AboutSection() {
                 </div>
                 <h3 className="text-xl font-medium mb-2">Web Development</h3>
                 <p className="text-muted-foreground">
-                  Building responsive and interactive web applications.
+                  Building responsive and interactive web applications with Java, JSP, and React.
                 </p>
               </CardContent>
             </Card>
@@ -48,9 +46,9 @@ export function AboutSection() {
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Database className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-medium mb-2">Data Mining</h3>
+                <h3 className="text-xl font-medium mb-2">AI & ML</h3>
                 <p className="text-muted-foreground">
-                  Extracting insights from large datasets.
+                  Developing models using TensorFlow, Keras, and MobileNet architecture.
                 </p>
               </CardContent>
             </Card>
@@ -62,7 +60,7 @@ export function AboutSection() {
                 </div>
                 <h3 className="text-xl font-medium mb-2">Blockchain</h3>
                 <p className="text-muted-foreground">
-                  Exploring decentralized technologies and cryptocurrencies.
+                  Exploring decentralized applications with Solidity and Web3.js.
                 </p>
               </CardContent>
             </Card>

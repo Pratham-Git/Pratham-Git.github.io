@@ -6,31 +6,49 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce platform with user authentication, product management, and payment integration.",
+    title: "Quotation and Tender Management System",
+    description: "A web application for managing quotations and tenders, developed for Indian Railway Works Contract Management System.",
     image: "https://placehold.co/600x400/2563eb/FFFFFF/png",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    tech: ["Java", "JSP", "MySQL", "Bootstrap"],
     liveLink: "#",
     githubLink: "#",
-    challenge: "Implementing secure payment processing and optimizing database queries for large product catalogs."
+    challenge: "Developing a comprehensive module that handles complex tender management workflows while ensuring data integrity and security."
   },
   {
-    title: "Machine Learning Model",
-    description: "A predictive model for stock market analysis using historical data and sentiment analysis.",
+    title: "Dog Breed Identification Model",
+    description: "Machine learning model using MobileNet architecture to identify dog breeds from images.",
     image: "https://placehold.co/600x400/2563eb/FFFFFF/png",
-    tech: ["Python", "TensorFlow", "Pandas", "Natural Language Processing"],
+    tech: ["Python", "TensorFlow", "Keras", "MobileNet"],
     liveLink: "#",
     githubLink: "#",
-    challenge: "Processing large datasets efficiently and creating accurate prediction algorithms."
+    challenge: "Optimizing the model for accuracy while ensuring efficient performance on various devices, trained on an RTX 3060."
   },
   {
-    title: "Blockchain Explorer",
-    description: "A web application for visualizing blockchain transactions and network statistics.",
+    title: "Blockchain-Based Job Marketplace",
+    description: "A decentralized platform connecting freelancers with employers using smart contracts for secure transactions.",
     image: "https://placehold.co/600x400/2563eb/FFFFFF/png",
-    tech: ["JavaScript", "Web3.js", "React", "D3.js"],
+    tech: ["Solidity", "Web3.js", "React", "Ethereum"],
     liveLink: "#",
     githubLink: "#",
-    challenge: "Real-time data synchronization and creating intuitive visualizations for complex blockchain data."
+    challenge: "Implementing secure smart contracts that protect both freelancers and employers while maintaining a user-friendly interface."
+  },
+  {
+    title: "Ocean Focus App",
+    description: "A productivity application that helps users focus on their studies with timed sessions and progress tracking.",
+    image: "https://placehold.co/600x400/2563eb/FFFFFF/png",
+    tech: ["React Native", "JavaScript", "Mobile UI/UX"],
+    liveLink: "#",
+    githubLink: "#",
+    challenge: "Creating an engaging and distraction-free UI that encourages productivity while providing useful metrics on study habits."
+  },
+  {
+    title: "Offline Payment System",
+    description: "An Android application enabling UPI-like payments without internet connectivity using Bluetooth or AirDrop technology.",
+    image: "https://placehold.co/600x400/2563eb/FFFFFF/png",
+    tech: ["Android Studio", "Java", "Bluetooth API", "Payment Processing"],
+    liveLink: "#",
+    githubLink: "#",
+    challenge: "Ensuring secure transaction processing in offline environments while maintaining ease of use comparable to online payment systems."
   }
 ];
 
