@@ -1,8 +1,73 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, Database, Layers } from "lucide-react";
+import { useRef, useEffect } from "react";
 
 export function AboutSection() {
+  // Card hover effect
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent, card: HTMLDivElement) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const deltaX = (x - centerX) / centerX;
+      const deltaY = (y - centerY) / centerY;
+      
+      const tiltX = deltaY * 8;
+      const tiltY = -deltaX * 8;
+      
+      card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-8px) scale(1.02)`;
+      
+      // Create a subtle shine effect
+      const shine = card.querySelector('.card-shine') as HTMLDivElement;
+      if (shine) {
+        shine.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 80%)`;
+      }
+    };
+    
+    const handleMouseLeave = (card: HTMLDivElement) => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+      const shine = card.querySelector('.card-shine') as HTMLDivElement;
+      if (shine) {
+        shine.style.background = 'rgba(255,255,255,0)';
+      }
+    };
+    
+    cardRefs.current.forEach((card) => {
+      if (card) {
+        // Add event listeners
+        card.addEventListener('mousemove', (e) => handleMouseMove(e, card));
+        card.addEventListener('mouseleave', () => handleMouseLeave(card));
+        
+        // Add shine element
+        const shine = document.createElement('div');
+        shine.className = 'card-shine absolute inset-0 pointer-events-none';
+        card.appendChild(shine);
+      }
+    });
+    
+    return () => {
+      cardRefs.current.forEach((card) => {
+        if (card) {
+          card.removeEventListener('mousemove', (e) => handleMouseMove(e, card));
+          card.removeEventListener('mouseleave', () => handleMouseLeave(card));
+          
+          // Remove shine element
+          const shine = card.querySelector('.card-shine');
+          if (shine) {
+            card.removeChild(shine);
+          }
+        }
+      });
+    };
+  }, []);
+
   return (
     <section id="about" className="bg-secondary/50 dark:bg-gray-900/50">
       <div className="section-container">
@@ -29,7 +94,10 @@ export function AboutSection() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-left">
-            <Card className="glass-card transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
+            <Card 
+              className="glass-card card-tilt relative overflow-hidden" 
+              ref={el => cardRefs.current[0] = el}
+            >
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 transform transition-all duration-300 group-hover:bg-primary/20">
                   <Code className="h-6 w-6 text-primary" />
@@ -41,7 +109,10 @@ export function AboutSection() {
               </CardContent>
             </Card>
             
-            <Card className="glass-card transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
+            <Card 
+              className="glass-card card-tilt relative overflow-hidden" 
+              ref={el => cardRefs.current[1] = el}
+            >
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 transform transition-all duration-300 group-hover:bg-primary/20">
                   <Database className="h-6 w-6 text-primary" />
@@ -53,7 +124,10 @@ export function AboutSection() {
               </CardContent>
             </Card>
             
-            <Card className="glass-card md:col-span-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
+            <Card 
+              className="glass-card card-tilt md:col-span-2 relative overflow-hidden" 
+              ref={el => cardRefs.current[2] = el}
+            >
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 transform transition-all duration-300 group-hover:bg-primary/20">
                   <Layers className="h-6 w-6 text-primary" />
