@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 export function ContactSection() {
@@ -59,8 +59,8 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:pratham.jaiswal@example.com" className="text-primary hover:underline">
-                      pratham.jaiswal@example.com
+                    <a href="mailto:jaiswalpratham@outlook.com" className="text-primary hover:underline">
+                      jaiswalpratham@outlook.com
                     </a>
                   </div>
                 </CardContent>
@@ -73,16 +73,30 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <a href="tel:+911234567890" className="text-primary hover:underline">
-                      +91 123 456 7890
+                    <a href="tel:+919999130394" className="text-primary hover:underline">
+                      +91 999 913 0394
                     </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="glass-card">
+                <CardContent className="p-4 flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium">Location</p>
+                    <p className="text-muted-foreground">
+                      New Delhi, India
+                    </p>
                   </div>
                 </CardContent>
               </Card>
 
               <div className="flex items-center space-x-4 pt-4">
                 <a
-                  href="https://github.com/prathamjaiswal"
+                  href="https://github.com/Pratham-Git"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center transition-colors hover:bg-primary/20"
@@ -90,7 +104,7 @@ export function ContactSection() {
                   <Github className="h-5 w-5 text-primary" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/prathamjaiswal"
+                  href="https://www.linkedin.com/in/pratham-jaiswal-ab89a8277/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center transition-colors hover:bg-primary/20"

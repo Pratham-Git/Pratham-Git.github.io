@@ -42,13 +42,13 @@ const projects = [
     challenge: "Creating an engaging and distraction-free UI that encourages productivity while providing useful metrics on study habits."
   },
   {
-    title: "Offline Payment System",
-    description: "An Android application enabling UPI-like payments without internet connectivity using Bluetooth or AirDrop technology.",
+    title: "Blockchain-Based Offline Payment System",
+    description: "An Android application enabling offline cryptocurrency payments using blockchain technology through Bluetooth connections.",
     image: "https://placehold.co/600x400/2563eb/FFFFFF/png",
-    tech: ["Android Studio", "Java", "Bluetooth API", "Payment Processing"],
+    tech: ["Android Studio", "Java", "Blockchain", "Bluetooth API"],
     liveLink: "#",
     githubLink: "#",
-    challenge: "Ensuring secure transaction processing in offline environments while maintaining ease of use comparable to online payment systems."
+    challenge: "Implementing secure blockchain transactions in offline environments while maintaining the integrity of the transaction ledger."
   }
 ];
 

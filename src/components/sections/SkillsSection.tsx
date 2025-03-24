@@ -103,10 +103,10 @@ export function SkillsSection() {
                 I am currently expanding my expertise in the following areas:
               </p>
               <ul className="space-y-2 list-disc list-inside text-muted-foreground">
-                <li>Advanced AI & ML applications with TensorFlow and Keras</li>
+                <li>Python Data Structures and Algorithms</li>
+                <li>LeetCode problem-solving and competitive programming</li>
                 <li>Blockchain development with Ethereum and Solidity</li>
-                <li>Mobile app development with React Native</li>
-                <li>Full-stack web development with Java and modern frameworks</li>
+                <li>Advanced AI & ML applications with TensorFlow and Keras</li>
               </ul>
             </div>
           </div>
