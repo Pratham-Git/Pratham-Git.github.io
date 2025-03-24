@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Download, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 
 const navLinks = [
@@ -67,9 +67,6 @@ export function Navbar() {
             )}
             <span className="sr-only">Toggle theme</span>
           </Button>
-          <Button className="ml-2" size="sm">
-            <Download className="mr-2 h-4 w-4" /> Resume
-          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -133,9 +130,6 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <Button className="mt-2" size="sm">
-                <Download className="mr-2 h-4 w-4" /> Resume
-              </Button>
             </nav>
           </div>
         )}

@@ -7,6 +7,7 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { ParallaxBackground } from "@/components/ParallaxBackground";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -41,6 +42,7 @@ const Index = () => {
 
   return (
     <>
+      <ParallaxBackground />
       <Navbar />
       <main className="pt-16">
         <HeroSection />

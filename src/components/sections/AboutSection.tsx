@@ -29,9 +29,9 @@ export function AboutSection() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-left">
-            <Card className="glass-card">
+            <Card className="glass-card transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 transform transition-all duration-300 group-hover:bg-primary/20">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-medium mb-2">Web Development</h3>
@@ -41,9 +41,9 @@ export function AboutSection() {
               </CardContent>
             </Card>
             
-            <Card className="glass-card">
+            <Card className="glass-card transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 transform transition-all duration-300 group-hover:bg-primary/20">
                   <Database className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-medium mb-2">AI & ML</h3>
@@ -53,9 +53,9 @@ export function AboutSection() {
               </CardContent>
             </Card>
             
-            <Card className="glass-card md:col-span-2">
+            <Card className="glass-card md:col-span-2 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 transform transition-all duration-300 group-hover:bg-primary/20">
                   <Layers className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-medium mb-2">Blockchain</h3>
